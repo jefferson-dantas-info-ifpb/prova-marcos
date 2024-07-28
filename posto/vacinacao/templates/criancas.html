@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{titulo}}</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: #ddd;
+            padding: 10px;
+        }
+
+        td {
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>{{titulo}}</h1>
+
+    <table border>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Mãe</th>
+                <th>Vacina</th>
+                <th>Bairro</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for crianca in criancas %}
+            <tr>
+                <td>{{crianca.nome_crianca}}</td>
+                <td>{{crianca.idade_crianca}}</td>
+                <td>{{crianca.nome_mae}}</td>
+                <td>{{crianca.vacina}}</td>
+                <td>{{crianca.bairro}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+</html>
